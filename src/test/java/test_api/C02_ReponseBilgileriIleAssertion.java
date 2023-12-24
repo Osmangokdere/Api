@@ -5,7 +5,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C02_Reponse {
+public class C02_ReponseBilgileriIleAssertion {
 
     @Test
     public void get01(){
@@ -25,10 +25,6 @@ public class C02_Reponse {
                 statusCode(200).
                 contentType("application/json; charset=utf-8").
                 header("Server","Cowboy").statusLine("HTTP/1.1 200 OK");
-
-
-
-
 
     }
 }
