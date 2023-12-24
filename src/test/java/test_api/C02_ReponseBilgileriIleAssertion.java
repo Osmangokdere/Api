@@ -9,7 +9,7 @@ public class C02_ReponseBilgileriIleAssertion {
 
     @Test
     public void get01(){
-        String url="https://restful-booker.herokuapp.com/booking/1897";
+        String url="https://restful-booker.herokuapp.com/booking/10";
 
         //2- Eger soruda bize verilmis ise expected data yi hazirla
 
