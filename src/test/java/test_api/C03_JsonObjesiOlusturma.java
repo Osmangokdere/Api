@@ -30,10 +30,5 @@ public class C03_JsonObjesiOlusturma {
         body.put("lastname ","Brown");
 
         System.out.println(body);
-
-
-
     }
-
-
 }
