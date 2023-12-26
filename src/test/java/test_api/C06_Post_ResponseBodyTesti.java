@@ -37,17 +37,16 @@ public class C06_Post_ResponseBodyTesti {
         requestBody.put("body","API ogrenmek ne guzel");
         requestBody.put("userId",10);
 
-        System.out.println(requestBody);
 
         // 2- Expected data hazirla
-
         //3- Response kaydet
-
-        Response response=given().contentType(ContentType.JSON).
-                when().body(requestBody.toString()).
+        Response response=given().// dan sonra precontidions u belitmemiz gerekir.
+                            contentType(ContentType.JSON).
+                when().
+                            body(requestBody.toString()).
                 post(Url);
 
-        // 4- Assertion
+                // 4- Assertion
         response
                 .then()
                 .assertThat()
@@ -58,5 +57,4 @@ public class C06_Post_ResponseBodyTesti {
                         "body",containsString("API"));
 
     }
-
 }

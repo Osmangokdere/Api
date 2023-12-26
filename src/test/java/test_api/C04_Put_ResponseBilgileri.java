@@ -7,7 +7,7 @@ import org.junit.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class C04_put {
+public class C04_Put_ResponseBilgileri {
         /*
         https://jsonplaceholder.typicode.com/posts/70 url’ine
         asagidaki Json formatindaki body ile bir PUT request gonderdigimizde
@@ -25,31 +25,36 @@ public class C04_put {
 
          */
 
-    // 1- end point ve request body hazirla
 
     @Test
     public void put01() {
 
+
+        // 1- end point ve request body hazirla
         String url = "https://jsonplaceholder.typicode.com/posts/70";
 
+        //body i hazirla;
+
+              /*  {
+            "title":"Ahmet",
+                "body":"Merhaba",
+                "userId":10,
+                "id":70
+        }*/
         JSONObject reqbody = new JSONObject();
         reqbody.put("title", "Ahmet");
         reqbody.put("body", "Merhaba");
         reqbody.put("userId", 10);
         reqbody.put("id", 70);
-        System.out.println(reqbody);
 
         //2-Soruda istendiyse Excepted Data hazirla
 
-        // 3- REsponse i kaydet
+        // 3- Response i kaydet
 
         Response response = given().
                 contentType(ContentType.JSON).
                 when().
                 body(reqbody.toString()).put(url);
-        response.prettyPrint();
-
-
         //4- Assertion
         /*
         donen Response’un,
@@ -85,8 +90,6 @@ public class C04_put {
             // 3- Request gonderip, donen response'i kaydetme
 
             Response response = given().when().get(url);
-            response.prettyPrint();
-
             // 4- Assertion
 
 
