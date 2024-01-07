@@ -7,7 +7,7 @@ import org.junit.runner.Request;
 
 public class jsonPlaceHolderBaseUrl {
 
-   protected RequestSpecification specJsonPlace;
+   public RequestSpecification specJsonPlace;
 
     @Before
     public void setUp(){
