@@ -44,6 +44,10 @@ public class C18_TestDataKullanimi extends jsonPlaceHolderBaseUrl {
         JsonPath resJpath=response.jsonPath();
         Assert.assertEquals(testDataJsonPlaceHolder.basariliStatusCode,
                 response.getStatusCode());
+        Assert.assertEquals(expDAta.get("userId"), resJpath.get("userId"));
+        Assert.assertEquals(expDAta.get("id"), resJpath.get("id"));
+        Assert.assertEquals(expDAta.get("body"), resJpath.get("body"));
+        Assert.assertEquals(expDAta.get("title"), resJpath.get("title"));
 
     }
 }
