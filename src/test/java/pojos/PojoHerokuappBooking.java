@@ -8,24 +8,37 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PojoHerokuappBooking {
-    /*"firstname":"Ahmet",
-     "lastname":"Bulut",
-     "totalprice":500,
-     "depositpaid":false,
-     "bookingdates":{
-         "checkin":"2021-06-01",
-         "checkout":"2021-06-10"
-     ,
-     "additionalneeds":"wi-fi"
-                    }
+    /*
+    {
+      "firstname":"Ahmet",
+      "lastname":"Bulut",
+      "totalprice":500,
+      "depositpaid":false,
+      "bookingdates":{
+          "checkin":"2021-06-01",
+          "checkout":"2021-06-10"
+                      }
+      ,
+      "additionalneeds":"wi-fi"
+     }
      */
     private String firstname;
     private String lastname;
-    private String totalprice;
-    private String depositpaid;
+    private int totalprice;
+    private boolean depositpaid;
     private String additionalneeds;
+
     private PojoHerokuappBookingDates bookingdates;
 
-    public PojoHerokuappBooking(String ahmet) {
-    }
 }
+
+
+   /* public PojoHerokuappBooking(String firstname, String lastname, String totalprice, String depositpaid, String additionalneeds, PojoHerokuappBookingDates bookingdates) {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.totalprice = totalprice;
+        this.depositpaid = depositpaid;
+        this.additionalneeds = additionalneeds;
+        this.bookingdates = bookingdates;*/
+
+

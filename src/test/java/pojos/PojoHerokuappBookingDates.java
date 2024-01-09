@@ -1,5 +1,6 @@
 package pojos;
 
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,9 +9,12 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PojoHerokuappBookingDates {
-   /*
-"     "checkin":"2021-06-01",
-"     "checkout":"2021-06-10"*/
+    /*
+    {
+       "checkin":"2021-06-01",
+       "checkout":"2021-06-10"
+     }
+     */
     private String checkin;
     private String checkout;
 
